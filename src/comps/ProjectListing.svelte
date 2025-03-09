@@ -5,12 +5,14 @@
 	import { projectListingInformation } from '$lib/project-listing-height.svelte';
 	import { onMount } from 'svelte';
 
-	const {
+	let {
 		shouldAddTitle = true,
 		isCollapsed = false,
+		collapseFunction = () => {},
 	}: {
 		shouldAddTitle?: boolean;
 		isCollapsed?: boolean;
+		collapseFunction?: () => void;
 	} = $props();
 	const currentLink = {
 		get url() {
@@ -54,7 +56,7 @@
 		>
 			{#each projects as project}
 				<li>
-					<a href="/projects/{project}">
+					<a href="/projects/{project}" onclick={collapseFunction}>
 						<img
 							src="/img/widgets/{project}.png"
 							alt={project}

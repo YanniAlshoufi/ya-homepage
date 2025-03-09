@@ -6,7 +6,7 @@
 
 	const { children } = $props();
 
-	let isCollapsed = $state(false);
+	let isCollapsed = $state(true);
 
 	function toggleProjectWidgets() {
 		isCollapsed = !isCollapsed;
@@ -24,7 +24,8 @@
 	{/if}
 </button>
 
-<ProjectListing shouldAddTitle={false} {isCollapsed}></ProjectListing>
+<ProjectListing shouldAddTitle={false} {isCollapsed} collapseFunction={toggleProjectWidgets}
+></ProjectListing>
 
 <div
 	class="projects-project-listing transition-transform duration-500 ease-in-out"

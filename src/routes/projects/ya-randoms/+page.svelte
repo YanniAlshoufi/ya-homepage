@@ -28,15 +28,17 @@
 		<h2>Yanni Clock</h2>
 		<a href="https://yanni-clock.web.app">https://yanni-clock.web.app</a>
 		<p>
-			A—in my opinion—cool clock that I made back when I was still learning about sin, cos,
-			and tan. It was a lot of fun.
+			A cool clock that I made back when I was still learning about sin, cos, and tan. It was
+			a lot of fun.
 		</p>
 
 		<div>
 			<strong>Tech:</strong>
-			<li>Vanilla HTML, CSS, JS</li>
-			<li>P5JS</li>
-			<li>I also made a version with Processing and Java instead</li>
+			<ul>
+				<li>Vanilla HTML, CSS, JS</li>
+				<li>P5JS</li>
+				<li>I also made a version with Processing and Java instead</li>
+			</ul>
 		</div>
 	</section>
 
@@ -46,20 +48,23 @@
 		<a href="https://github.com/dachsapp/YaChess"> https://github.com/dachsapp/YaChess </a>
 
 		<p>
-			A little chess game for school. We had an assignment to make a game that uses many
-			Unicode characters and I really wanted to program chess, so I did. I learned a lot and
-			for some reason fell back to manually programming a bunch of mathematical concepts like
-			vectors. The game is missing some game rules (like castling) but I stopped working on it
-			because the year was over and I wanted to do other things. This was in my first year of
-			high school.
+			A little chess game for school. We had an assignment to make a console game that uses
+			plenty of unicode characters and I really wanted to program chess, so I did. I learned a
+			lot and for some reason fell back to manually programming a bunch of mathematical
+			concepts like vectors. The game is missing some game rules (like castling) but I stopped
+			working on it because the year was over and I wanted to do other things.
 		</p>
 
-		<strong>Tech:</strong>
-		<ul>
-			<li>C# with .NET</li>
-			<li>A bunch of math</li>
-			<li>Unicode</li>
-		</ul>
+		<p>I made this in my first year of high school.</p>
+
+		<div>
+			<strong>Tech:</strong>
+			<ul>
+				<li>C# with .NET</li>
+				<li>A bunch of math</li>
+				<li>Unicode</li>
+			</ul>
+		</div>
 	</section>
 {/snippet}
 

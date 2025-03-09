@@ -11,7 +11,8 @@
 
 	<p>
 		This was my first big app. It is something of a Pokémon Go clone. We had a team back then
-		but I was the only programmer. This one year before high school, so I was still self-taught.
+		but I was the only programmer. This was one year before high school, so I was still
+		self-taught.
 	</p>
 
 	<p>
@@ -20,12 +21,15 @@
 	</p>
 
 	<p>
-		Back then, Pokémon Go was still in the hype and my school was called “Dachsberg” (GR:
-		“Badger Mountain”), so we decided to create a clone that is all about collecting coins to
-		buy clothing for the badger you play as.
+		Back then, Pokémon Go was still in the hype and my school was called “Dachsberg” (which is
+		German for “Badger Mountain”), so we decided to create a clone that is all about collecting
+		coins to buy clothing for the badger you play as.
 	</p>
 
-	<p>It was a lot of fun and I learned a lot, even had my first real burn out after. xD</p>
+	<p>
+		It was a lot of fun and I learned a lot, even had my first real burn out after. Good times!
+		xD
+	</p>
 
 	<div>
 		<strong>Tech:</strong>

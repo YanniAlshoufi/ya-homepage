@@ -6,13 +6,10 @@
 <svelte:head>
 	<title>Yanni Alshoufi's Homepage (Yane Al Shoufi)</title>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<meta
-		name="description"
-		content="My personal homepage. I am Yanni Alshoufi, my official name is Yane Al Shoufi."
-	/>
+	<meta name="description" content="I’m a 19 y/o dev who loves solving hard problems :)" />
 	<meta
 		name="keywords"
-		content="yanni, yane, alshoufi, al shoufi, al choufi, alchoufi, alschofi, al schofi, al schufi, alschufi, alshufi, al shufi, profile, bio, biography, homepage, personal, person, personal homepage, personal site, personal page"
+		content="yanni, yane, alshoufi, al shoufi, al choufi, alchoufi, alschofi, al schofi, al schufi, alschufi, alshufi, al shufi, profile, bio, biography, homepage, personal, person, personal homepage, personal site, personal page, ياني, الشوفي, ياني الشوفي"
 	/>
 </svelte:head>
 

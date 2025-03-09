@@ -1,12 +1,35 @@
-<script>
+<script lang="ts">
 	import ResponsiveContent from '../../comps/ResponsiveContent.svelte';
+	import type { Snippet } from 'svelte';
 
 	const possibleDescriptions = [aFireThatNeverStops, languages, techPreferences];
-	let currentDescription = $state(possibleDescriptions[0]);
+	let currentDescriptionIdx = $state(0);
+	let currentDescription = $derived(possibleDescriptions[currentDescriptionIdx]);
+
+	function goToNextDescription() {
+		currentDescriptionIdx =
+			(currentDescriptionIdx + possibleDescriptions.length - 1) % possibleDescriptions.length;
+	}
+
+	function goToPreviousDescription() {
+		currentDescriptionIdx = (currentDescriptionIdx + 1) % possibleDescriptions.length;
+	}
+
+	function setDescriptionTo(description: Snippet) {
+		const newIdx = possibleDescriptions.indexOf(description);
+		currentDescriptionIdx = Math.max(0, newIdx);
+	}
 </script>
 
 <div class="flex min-h-20 items-center justify-center">
 	<div class="flex gap-5">
+		<button
+			class="cursor-pointer hover:scale-125 focus:translate-x-0 active:-translate-x-2"
+			onclick={goToNextDescription}
+		>
+			<span class="icon-[mingcute--left-fill]"></span>
+		</button>
+
 		{#each possibleDescriptions as description}
 			<label
 				class="h-5 w-5 rounded bg-white ring-2 ring-white [&:has(input:checked)]:bg-zinc-900"
@@ -16,10 +39,17 @@
 					type="radio"
 					name="group"
 					checked={currentDescription === description}
-					onchange={() => (currentDescription = description)}
+					onchange={() => setDescriptionTo(description)}
 				/>
 			</label>
 		{/each}
+
+		<button
+			class="cursor-pointer hover:scale-125 focus:translate-x-0 active:translate-x-2"
+			onclick={goToPreviousDescription}
+		>
+			<span class="icon-[mingcute--right-fill]"></span>
+		</button>
 	</div>
 </div>
 
@@ -30,7 +60,7 @@
 <!--DESCRIPTION SNIPPETS-->
 
 {#snippet aFireThatNeverStops()}
-	<h1>A Fire that Never Stops!!</h1>
+	<h1>My Inner Fire</h1>
 	<p>
 		About 2 to 3 years after my family’s refuge to Austria in 2015, I started learning a lot
 		about programming. This little interest of mine has truly changed my life for the better,
@@ -41,13 +71,13 @@
 		Knowing how to program is knowing how to learn. As such, and because I love learning new
 		things, software development has the ability to keep my inner fire going! Every new problem
 		I face motivates me. Before I knew it, dev had become more than just a hobby for me.
-		Programming, and by extension learning new things constantly, is my passion!
+		Programming, and by extension constantly learning new things, is my passion.
 	</p>
 
 	<p>
 		Because of that, I am currently attending a high school called “HTBLA Leonding”, a technical
 		college in Upper Austria that is focused on software development/engineering. I have never
-		been more content in life. I learn new things every day and it is absolutely awesome! :))
+		been more content in life. I learn new things every day and it is absolutely awesome! :)
 	</p>
 {/snippet}
 
@@ -59,7 +89,7 @@
 		that familiar)
 	</p>
 
-	<strong>Favorites: </strong>
+	<strong>Favorites:</strong>
 
 	<ol>
 		<li>C# (very familiar)</li>
@@ -86,22 +116,22 @@
 {/snippet}
 
 {#snippet techPreferences()}
-	<h1>Tech Preferences (Don’t Hate Me :))</h1>
+	<h1>Tech Preferences</h1>
 	<p>
-		Yeah yeah, I know, DX is an illusion, code style preferences are a matter of habit, and no
+		Yeah, yeah, I know, DX is an illusion, code style preferences are a matter of habit, and no
 		one cares about my code editor, but this is my website, so here are my tech preferences
-		anyway! xD
+		anyway! :)
 	</p>
 
 	<h2>It Is Obvious!</h2>
 
 	<p>
-		OK, easy things first, static types are the way to go (sorry JS,) comments are annoying but
+		OK, easy things first, static types are the way to go (sorry JS), comments are annoying but
 		please document public APIs, Windows should give us all the games and then die for good, vim
-		motions are simply superior, but stop configuring everything all the time, inheritance is
-		mostly bad, algebraic data types are essential in modern programming languages, good
-		abstractions are rare, stop nesting, loop breaks and multiple returns are fine in most
-		cases, and, for the love of god, stop making UIs in Rust!
+		motions are superior but stop configuring everything all the time, inheritance is mostly a
+		pain, algebraic data types are essential in modern programming languages, good abstractions
+		are rare, stop nesting too much, loop breaks and multiple returns in a function are fine in
+		most cases, and, for the love of god, stop making UIs in Rust!
 	</p>
 
 	<p>Now, for the two people still reading…</p>
@@ -150,11 +180,11 @@
 
 	<h2>Controversial</h2>
 
-	<p>Now, for the really controversial part!</p>
+	<p>Now, for the interesting part!</p>
 
 	<ul>
 		<li>
-			I think the Allman brace notation is nice. Yes, I said it, I think it looks clean, OK!‽?
+			I think the Allman brace notation is nice. Yes, I said it, I think it looks clean, OK‽
 			(That being said, just follow whatever your team is doing, please!)
 		</li>
 		<li>
@@ -172,7 +202,7 @@
 			programmers.
 		</li>
 		<li>
-			Math is really important for many kinds of programming. While being great at it is not
+			Math is really important for many kinds of problems. While being great at it is not
 			essential for becoming a dev, being horrible at math is a huge setback when learning new
 			skills.
 		</li>

@@ -1,7 +1,5 @@
 <script lang="ts">
 	import ResponsiveContent from './ResponsiveContent.svelte';
-	import IconBurgerMenu from 'virtual:icons/iconamoon/menu-burger-horizontal-bold';
-	import IconBack from '~icons/pajamas/go-back';
 	import { pages, defaultPage } from '$lib/pages.js';
 
 	let isMenuVisible = $state(false);
@@ -39,13 +37,13 @@
 				{/if}
 			{/each}
 			<li class="sm:hidden">
-				<button onclick={showNavBar}>
-					<IconBurgerMenu />
+				<button onclick={showNavBar} class="flex items-center justify-center text-3xl">
+					<span class="icon-[mingcute--menu-fill]"></span>
 				</button>
 			</li>
 		</ul>
 		<div
-			class="font-title flex flex-1 cursor-pointer select-none justify-end text-center
+			class="flex flex-1 cursor-pointer select-none justify-end text-center font-title
 					   text-4xl font-bold text-rose-400"
 		>
 			<a
@@ -60,12 +58,15 @@
 </ResponsiveContent>
 
 <nav
-	class="fixed bottom-0 left-0 top-0 w-dvw justify-center bg-black bg-opacity-50 transition
+	class="fixed bottom-0 left-0 top-0 w-dvw justify-center bg-black bg-opacity-80 transition
 		   ease-in-out {menuVisibilityClassName} z-40 pt-5 sm:-translate-x-full"
 >
 	<div class="pl-5">
-		<button class="cursor-pointer text-3xl text-gray-400" onclick={hideNavBar}>
-			<IconBack />
+		<button
+			class="flex cursor-pointer items-center justify-center text-4xl text-gray-400"
+			onclick={hideNavBar}
+		>
+			<span class="icon-[mingcute--back-fill]"></span>
 		</button>
 	</div>
 

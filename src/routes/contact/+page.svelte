@@ -5,13 +5,17 @@
 {#snippet content()}
 	<h1>Contact and Exact Information about Me</h1>
 
-	<strong>Email:</strong>
-	<p>yanni.school.work@gmail.com</p>
+	<div>
+		<strong>Email:</strong>
+		<p>yanni.school.work@gmail.com</p>
+	</div>
 
-	<strong>Linked-In:</strong>
-	<a href="https://www.linkedin.com/in/yanni-alshoufi/">
-		https://www.linkedin.com/in/yanni-alshoufi/
-	</a>
+	<div>
+		<strong>Linked-In:</strong>
+		<a href="https://www.linkedin.com/in/yanni-alshoufi/">
+			https://www.linkedin.com/in/yanni-alshoufi/
+		</a>
+	</div>
 
 	<table>
 		<tbody>
@@ -26,11 +30,13 @@
 		</tbody>
 	</table>
 
-	<strong>Non-Exact Address:</strong>
-	<p>
-		4710 Grieskirchen<br />
-		Upper Austria, AUSTRIA
-	</p>
+	<div>
+		<strong>Non-Exact Address:</strong>
+		<p>
+			4710 Grieskirchen<br />
+			Upper Austria, AUSTRIA
+		</p>
+	</div>
 {/snippet}
 
 <ResponsiveContent {content} />

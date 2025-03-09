@@ -11,13 +11,21 @@
 				<h2 class="font-bold">Some Tech:</h2>
 
 				<ul
-					class="flex translate-x-5 list-outside list-['—_'] flex-col gap-2 [&>li]:relative [&>li]:pl-5"
+					class="flex list-outside flex-col gap-2 [&>li>p]:flex-1 [&>li>span]:flex
+						   [&>li]:relative [&>li]:flex [&>li]:items-center [&>li]:gap-5"
 				>
-					<li class="list-['♥_']">C# (&lt;3), F#, Rust (BTW), SQL, Linux (Arch, BTW)</li>
-					<li class="list-['♥_']">
-						ASP.NET, Blazor, HTMX, Angular, Vue, Tailwind, Shell
+					<li>
+						<span class="icon-[mingcute--heart-fill]"></span>
+						<p>C# (&lt;3), F#, Rust (BTW), SQL, Linux (Arch, BTW)</p>
 					</li>
-					<li>Git (obviously), Java, Kotlin, C, Typo3</li>
+					<li>
+						<span class="icon-[mingcute--heart-fill]"></span>
+						<p>ASP.NET, Blazor, HTMX, Angular, Vue, Tailwind, Shell</p>
+					</li>
+					<li>
+						<span class="icon-[mingcute--check-fill]"></span>
+						<p>Git (obviously), Java, Kotlin, C, Typo3</p>
+					</li>
 				</ul>
 			</div>
 		</div>

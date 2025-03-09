@@ -11,23 +11,18 @@
 		https://github.com/YanniAlshoufi/ya-monadshttps://github.com/YanniAlshoufi/ya-fullstack
 	</a>
 
-	<p>
-		An opinionated C# template for creating fullstack Blazor app quickly (including an Option &
-		a Result type and scripts—e. g. for creating CRUD services).
-	</p>
+	<p>An opinionated C# template for creating fullstack apps quickly.</p>
 
-	<p>I’m making this because I need it for NiiC and because it is handy for a quick start.</p>
+	<p>I’m making this because I need it for NiiC and because it is handy for quick projects.</p>
 
 	<div>
 		<strong>Tech:</strong>
 		<ul>
-			<li>BlazorWASM</li>
+			<li>SvelteKit</li>
 			<li>Api Controllers</li>
 			<li>XUnit</li>
 			<li>NSubstitute</li>
 			<li>Mapperly</li>
-			<li>Self-made Option/Result type</li>
-			<li>Many small scripts</li>
 		</ul>
 	</div>
 {/snippet}
